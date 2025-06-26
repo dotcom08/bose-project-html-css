@@ -18,52 +18,102 @@ body {
 
 /* Header */
 .cart-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 40px;
-    position: relative;
-    max-width: 1200px;
-    margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 5%;
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
 }
 
 .logo {
-    font-size: 32px;
-    font-weight: bold;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+  font-size: 28px;
+  font-weight: bold;
+  position: static;
+  transform: none;
+  margin: 0 auto;
+  order: 1;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
 }
 
 .right-group {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-left: 0;
+  order: 2;
+  width: 100%;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .phone {
-    font-size: 15px;
-    color: #333;
+  font-size: 14px;
+  color: #333;
+  white-space: nowrap;
 }
 
 .cart-button {
-    padding: 8px 24px;
-    border: 1px solid #0066cc;
-    color: #0066cc;
-    background: transparent;
-    border-radius: 2px;
-    font-size: 15px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-weight: 400;
+  padding: 8px 20px;
+  border: 1px solid #0066cc;
+  color: #0066cc;
+  background: transparent;
+  border-radius: 2px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 400;
+  white-space: nowrap;
 }
 
 .cart-button:hover {
-    background-color: #0066cc;
-    color: white;
+  background-color: #0066cc;
+  color: white;
 }
 
+/* Version tablette (768px et plus) */
+@media (min-width: 768px) {
+  .cart-header {
+    padding: 20px 40px;
+    flex-wrap: nowrap;
+  }
+  
+  .logo {
+    font-size: 32px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    order: initial;
+    padding: 0;
+  }
+  
+  .right-group {
+    justify-content: flex-end;
+    width: auto;
+    margin-left: auto;
+  }
+  
+  .phone {
+    font-size: 15px;
+  }
+  
+  .cart-button {
+    font-size: 15px;
+    padding: 8px 24px;
+  }
+}
+
+/* Version desktop (992px et plus) */
+@media (min-width: 992px) {
+  .right-group {
+    gap: 20px;
+  }
+}
 
 
 /* footer */
