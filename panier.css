@@ -22,22 +22,45 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 20px 5%;
-  position: relative;
-  max-width: 1200px;
+  position: sticky; 
+  top: 0; 
+  z-index: 1000; 
   margin: 0 auto;
   flex-wrap: wrap;
+  background: white; 
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
 }
 
+
 .logo {
-  font-size: 28px;
-  font-weight: bold;
-  position: static;
-  transform: none;
-  margin: 0 auto;
-  order: 1;
-  width: 100%;
-  text-align: center;
-  padding: 10px 0;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 40px; /* Ajustez selon votre logo */
+  z-index: 10;
+  padding: 5px 0;
+  transition: all 0.3s ease;
+}
+
+/* Lien du logo */
+.logo a {
+  display: inline-block;
+  height: 100%;
+}
+
+/* Image du logo */
+.logo img {
+  height: 100%;
+  width: auto;
+  max-width: 120px; /* Largeur maximale */
+  object-fit: contain;
+  transition: all 0.3s ease;
+}
+
+/* Effet hover */
+.logo:hover img {
+  opacity: 0.9;
+  transform: scale(1.02);
 }
 
 .right-group {
@@ -81,15 +104,12 @@ body {
     padding: 20px 40px;
     flex-wrap: nowrap;
   }
-  
   .logo {
-    font-size: 32px;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    width: auto;
-    order: initial;
-    padding: 0;
+    height: 45px;
+  }
+  
+  .logo img {
+    max-width: 140px;
   }
   
   .right-group {
@@ -112,6 +132,13 @@ body {
 @media (min-width: 992px) {
   .right-group {
     gap: 20px;
+  }
+    .logo {
+    height: 50px;
+  }
+  
+  .logo img {
+    max-width: 160px;
   }
 }
 
@@ -475,6 +502,10 @@ h1 {
     background: #0066cc;
     color: white;
     border: none;
+}
+
+.checkout-actions a{
+    text-decoration: none;
 }
 
 .primary-btn:hover {

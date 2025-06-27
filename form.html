@@ -8,14 +8,262 @@
   </head>
   <body>
     <header class="cart-header">
-      <div class="logo">BOSE</div>
-      <div class="right-group">
-        <span class="phone">8-800 301-1464</span>
-        <button class="cart-button">Заказать звонок</button>
+      <div class="container">
+        <div class="logo">
+          <a href="home.html">
+            <img src="/assets/logo_bose.png" alt="logo" />
+          </a>
+        </div>
+        <div class="right-group">
+          <span class="phone">8-800 301-1464</span>
+          <button class="cart-button">Заказать звонок</button>
+        </div>
       </div>
     </header>
+    <div class="checkout-container">
+      <h1>Оформление заказа</h1>
 
-  
+      <div class="checkout-layout">
+        <div class="main-content">
+          <section class="delivery-section">
+            <h2>Тип покупателя и регион доставки</h2>
+
+            <div class="form-group">
+              <label><strong>Местоположение</strong></label>
+              <div class="location-grid">
+                <span class="location-option">Москва</span>
+                <span class="location-option">Воронеж</span>
+                <span class="location-option">Батеринбург</span>
+                <span class="location-option">Казань</span>
+                <span class="location-option">Калининград</span>
+                <span class="location-option">Краснодар</span>
+                <span class="location-option">Нижний Новгород</span>
+                <span class="location-option">Новосибирск</span>
+                <span class="location-option">Пермь</span>
+                <span class="location-option">Ростов-на-Дону</span>
+                <span class="location-option">Рязань</span>
+                <span class="location-option">Санкра</span>
+                <span class="location-option">Санкт-Петербург</span>
+                <span class="location-option">Сочи</span>
+                <span class="location-option">Уфа</span>
+              </div>
+            </div>
+
+            <div class="city-info">
+              <h3>Москва, Центр, Россия</h3>
+              <p>
+                Выберите свой город в списке. Если вы не нашли свой город,
+                выберите "другое местоположение", а город впишите в поле "Город"
+              </p>
+              <p class="required">* — Обязательные поля</p>
+            </div>
+          </section>
+
+          <section class="delivery-method">
+            <h2>Способ доставки</h2>
+
+            <div class="delivery-option active">
+              <label class="delivery-radio">
+                <input type="radio" name="delivery" checked />
+                <span class="radio-custom"></span>
+                <h3>Доставка до квартиры</h3>
+              </label>
+              <ul class="option-details">
+                <li>Стоимость: 0 р.</li>
+                <li>
+                  Срок доставки: от 1 дня до «на заказ» — у товаров в заказе
+                  разные сроки доставки
+                </li>
+                <li>Доставка заказа курьером до квартиры.</li>
+              </ul>
+            </div>
+
+            <div class="delivery-option">
+              <label class="delivery-radio">
+                <input type="radio" name="delivery" />
+                <span class="radio-custom"></span>
+                <h3>Доставка до пункта самовывоза</h3>
+              </label>
+              <ul class="option-details">
+                <li>Стоимость: 0 р.</li>
+                <li>
+                  Срок доставки: от 1 дня до «на заказ» — у товаров в заказе
+                  разные сроки доставки
+                </li>
+                <li>
+                  Доставка заказа в один из пунктов самовывоза транспортной
+                  компании.
+                </li>
+              </ul>
+            </div>
+
+            <div class="delivery-option">
+              <label class="delivery-radio">
+                <input type="radio" name="delivery" />
+                <span class="radio-custom"></span>
+                <h3>Самовывоз из шоурума</h3>
+              </label>
+              <ul class="option-details">
+                <li>Стоимость: бесплатно</li>
+                <li>
+                  Срок доставки: от 0 дней до «на заказ» — у товаров в заказе
+                  разные сроки доставки
+                </li>
+                <li>
+                  Вы можете самостоятельно забрать заказ в шоуруме на Таганке.
+                </li>
+              </ul>
+            </div>
+
+            <div class="delivery-option">
+              <label class="delivery-radio">
+                <input type="radio" name="delivery" />
+                <span class="radio-custom"></span>
+                <h3>Персональная доставка</h3>
+              </label>
+              <ul class="option-details">
+                <li>Стоимость: бесплатно</li>
+                <li>
+                  Стоимость и сроки доставки будут рассчитаны индивидуально
+                </li>
+              </ul>
+            </div>
+
+            <div class="delivery-note">
+              <p>
+                Не нашли подходящий вариант доставки? Выберите этот вариант — и
+                мы предложим оптимальные для вас варианты доставки.
+              </p>
+            </div>
+          </section>
+
+          <section class="payment-method">
+            <h2>Способ оплаты</h2>
+
+            <div class="payment-option active">
+              <h3>Наличными или банковской картой при получении¹</h3>
+              <p>Безналичный расчет</p>
+              <p>Оплата наличными или картой при получении заказа.</p>
+              <p class="payment-note">
+                * — при сумме заказа более 100 тыс. рублей доставка
+              </p>
+            </div>
+          </section>
+
+          <section class="customer-info">
+            <h2>Покупатель</h2>
+
+            <div class="form-grid">
+              <div class="form-group">
+                <label>Имя (Ф.И.О.) *</label>
+                <input type="text" required />
+              </div>
+
+              <div class="form-group">
+                <label>E-Mail *</label>
+                <input type="email" required />
+              </div>
+
+              <div class="form-group">
+                <label>Телефон *</label>
+                <input type="tel" required />
+              </div>
+
+              <div class="form-group">
+                <label>Индекс</label>
+                <input type="text" placeholder="101000" />
+              </div>
+
+              <div class="form-group full-width">
+                <label>Адрес доставки</label>
+                <input type="text" />
+              </div>
+
+              <div class="form-group full-width">
+                <label>Комментарии к заказу</label>
+                <textarea rows="4"></textarea>
+              </div>
+            </div>
+
+            <p class="required-fields">* — Обязательные поля</p>
+          </section>
+
+          <section class="order-products">
+            <h2>Товары в заказе</h2>
+
+            <table class="products-table">
+              <thead>
+                <tr>
+                  <th>Наименование</th>
+                  <th>Скидка</th>
+                  <th>Цена</th>
+                  <th>Количество</th>
+                  <th>Сумма</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Bose QuietComfort Headphones Black</strong></td>
+                  <td>5%</td>
+                  <td>
+                    <strong>50 340 р.</strong>
+                    <div class="original-price">52 990 р.</div>
+                  </td>
+                  <td>1 шт</td>
+                  <td><strong>50 340 р.</strong></td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="coupon-section">
+              <button class="apply-coupon">Применить</button>
+              <input type="text" placeholder="купон:" class="coupon-input" />
+            </div>
+
+            <div class="order-actions">
+              <div class="consent-checkbox">
+                <input type="checkbox" id="consent" checked />
+                <label for="consent"
+                  >Я прочитал и согласен на обработку персональных данных</label
+                >
+              </div>
+
+              <button class="checkout-btn large">Оформить заказ</button>
+            </div>
+          </section>
+        </div>
+
+        <aside class="order-summary">
+          <h2>Ваш заказ</h2>
+
+          <table class="summary-table">
+            <tr>
+              <td>Товаров на:</td>
+              <td>767 940 р.</td>
+            </tr>
+            <tr>
+              <td>Общий вес:</td>
+              <td>3,657 кг</td>
+            </tr>
+            <tr>
+              <td>НДС (20%, включен в цену):</td>
+              <td>127 990 р.</td>
+            </tr>
+            <tr class="yellow-bg">
+              <td>Доставка:</td>
+              <td>бесплатно ±270 р.</td>
+            </tr>
+          </table>
+
+          <div class="total-row">
+            <span>Итого:</span>
+            <span class="total-price">767 940 р.</span>
+          </div>
+
+          <button class="checkout-btn">Оформить заказ</button>
+        </aside>
+      </div>
+    </div>
 
     <footer class="main-footer">
       <div class="container">

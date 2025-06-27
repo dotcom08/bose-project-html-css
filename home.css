@@ -6,8 +6,12 @@
     font-family: 'Arial', sans-serif;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body {
-    background-color: #f5f5f5; /* Gris clair - remplacer par #fff pour blanc */
+    background-color: #f5f5f5;
 }
 
 .container {
@@ -18,6 +22,16 @@ body {
 }
 
 /* Top bar styles */
+
+.main-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
 .top-bar {
   background-color: #fff;
   color: #000;
@@ -32,6 +46,8 @@ body {
   align-items: center;
   flex-wrap: wrap;
 }
+
+
 
 .left-section {
   display: flex;
@@ -85,27 +101,42 @@ body {
 }
 
 /* Main Navigation Styles */
+
 .main-nav {
   background-color: #fff;
   padding: 20px 0;
   border-bottom: 1px solid #e0e0e0;
-  position: relative;
+  display: flex;
+
 }
+
 
 .main-nav .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  height: 100%;
 }
 
+
+/* Lien du logo */
 .logo {
-  color: #000;
-  font-size: 32px;
-  font-weight: bold;
-  letter-spacing: 1px;
-  z-index: 11;
+  flex: 0 0 auto; 
+  margin: 0 20px;
 }
 
+.logo a {
+  display: block;
+  height: 100%;
+}
+
+.logo img {
+  height: 40px;
+  width: auto;
+  max-width: 120px;
+  object-fit: contain;
+  transition: all 0.3s ease;
+}
 /* Navigation Links */
 .nav-container {
   display: flex;
@@ -268,7 +299,7 @@ main {
 .hero-image-container {
     position: relative;
     height: 400px;
-    background-image: url('hero-bg.jpg');
+    background-image: url('/assets/hero.jpg');
     background-size: cover;
     background-position: center;
     color: #fff;
@@ -516,9 +547,25 @@ main {
 .product-image {
     width: 100%;
     height: 180px;
-    background-color: #f0f0f0;
     margin-bottom: 15px;
     border-radius: 4px;
+    overflow: hidden; /* Cache les débordements */
+    position: relative;
+    background-color: #f9f9f9; /* Fond plus doux */
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Garde les proportions sans déformation */
+    object-position: center;
+    transition: all 0.4s ease;
+    mix-blend-mode: multiply; /* Meilleur rendu des produits blancs */
+}
+
+/* Effet hover sur la carte */
+.product-card:hover .product-image img {
+    transform: scale(1.05);
 }
 
 .product-info {
@@ -654,11 +701,8 @@ main {
 
 
 
-/* Rectangle Gris Clair */
-.gray-rectangle {
-    background-color: #e0e0e0;
-    border: 1px solid #d0d0d0;
-}
+
+
 
 /* Featured Products Grid */
 .featured-products {
@@ -671,17 +715,24 @@ main {
 .featured-product {
     position: relative;
     text-align: center;
+    transition: all 0.3s ease;
 }
 
-.product-image {
+/* Conteneur de l'image avec fond */
+.product-image.gray-rectangle {
     width: 100%;
     height: 250px;
     border-radius: 8px;
     margin-bottom: 15px;
     position: relative;
     overflow: hidden;
+    background-color: #f5f5f5; /* Fond de secours */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
+/* Overlay textuel */
 .image-overlay {
     position: absolute;
     top: 0;
@@ -695,43 +746,57 @@ main {
     padding: 20px;
     color: #000;
     text-align: center;
+    background: rgba(255, 255, 255, 0.4); /* Fond semi-transparent */
+    transition: all 0.3s ease;
 }
 
+/* Effet hover */
+.featured-product:hover .image-overlay {
+    background: rgba(255, 255, 255, 0.9);
+}
+
+/* Typographie */
 .image-overlay h3 {
     font-size: 22px;
     margin-bottom: 10px;
     font-weight: 600;
     line-height: 1.3;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.1);
 }
 
 .image-overlay p {
     font-size: 16px;
     line-height: 1.4;
+    color: #444;
 }
 
 .product-name {
     font-size: 18px;
     font-weight: 500;
     color: #333;
+    margin-top: 10px;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-    .featured-products {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-    
-    .product-image {
+    .product-image.gray-rectangle {
         height: 200px;
     }
     
     .image-overlay h3 {
         font-size: 20px;
     }
+    
+    .image-overlay {
+        padding: 15px;
+    }
 }
 
 @media (max-width: 480px) {
+    .product-image.gray-rectangle {
+        height: 180px;
+    }
+    
     .image-overlay h3 {
         font-size: 18px;
     }
@@ -745,7 +810,6 @@ main {
     }
 }
 
-
 /* Promotions Section */
 
 .promotions-section {
@@ -754,8 +818,6 @@ main {
 }
 
 
-
-/* En-tête identique à la section produits */
 .section-header {
     margin-bottom: 30px;
 }
@@ -768,6 +830,32 @@ main {
     gap: 25px;
 }
 
+.promo-image.gray-square {
+    width: 100%;
+    height: 200px;
+    background-color: #f5f5f5; /* Fond plus doux */
+    border: 1px solid #e0e0e0;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Style de l'image */
+.promo-image.gray-square img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Remplit le conteneur sans déformation */
+    object-position: center;
+    transition: all 0.4s ease;
+}
+
+/* Effet hover */
+.promotion-card:hover .promo-image.gray-square img {
+    transform: scale(1.05);
+    opacity: 0.95;
+}
 /* Carte promotion */
 .promotion-card {
     background-color: #fff;
@@ -858,6 +946,29 @@ main {
 }
 
 /* Cartes normales */
+.blog-image.gray-rectangle {
+    width: 100%;
+    height: 180px;
+    background-color: #f8f8f8; /* Fond plus clair */
+    border: 1px solid #e5e5e5;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Style de l'image */
+.blog-image.gray-rectangle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Remplit le conteneur sans déformation */
+    object-position: center;
+    transition: transform 0.4s ease, opacity 0.3s ease;
+}
+
+/* Effet hover */
+.blog-card:hover .blog-image.gray-rectangle img {
+    transform: scale(1.03);
+    opacity: 0.9;
+}
 .blog-card {
     background-color: #fff;
     border-radius: 8px;
@@ -889,53 +1000,104 @@ main {
 }
 
 /* Carte pleine largeur */
-.full-width-card {
+.blog-card.full-width-card {
     display: flex;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.store-image {
+.blog-card.full-width-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.12);
+}
+
+/* Conteneur de l'image */
+.store-image.gray-rectangle {
     width: 40%;
-    height: auto;
     min-height: 250px;
-    background-color: #e0e0e0;
-    border: 1px solid #d0d0d0;
+    background-color: #f5f5f5;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+/* Style de l'image */
+.store-image.gray-rectangle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.5s ease;
+}
+
+/* Effet hover sur l'image */
+.blog-card.full-width-card:hover .store-image.gray-rectangle img {
+    transform: scale(1.05);
+}
+
+/* Contenu texte */
 .store-content {
     width: 60%;
     padding: 30px;
+    display: flex;
+    flex-direction: column;
 }
 
 .store-content h3 {
-    font-size: 20px;
+    font-size: 22px;
     margin-bottom: 15px;
+    color: #222;
+    line-height: 1.3;
 }
 
 .store-content p {
     margin-bottom: 15px;
     line-height: 1.6;
+    color: #444;
 }
 
 .store-details {
     margin: 20px 0;
+    padding-left: 15px;
+    border-left: 3px solid #0066cc;
 }
 
 .store-details p {
     margin-bottom: 8px;
-    color: #666;
+    color: #555;
+    font-size: 15px;
 }
 
 .store-link {
+    display: inline-block;
     color: #0066cc;
     text-decoration: none;
     font-weight: 500;
-    transition: color 0.3s;
+    margin-top: auto; /* Aligne en bas */
+    padding: 8px 0;
+    transition: all 0.3s ease;
+    position: relative;
 }
 
 .store-link:hover {
     color: #004d99;
-    text-decoration: underline;
 }
+
+.store-link::after {
+    content: '→';
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+}
+
+.store-link:hover::after {
+    transform: translateX(3px);
+}
+
 
 /* Responsive */
 @media (max-width: 992px) {
@@ -964,6 +1126,13 @@ main {
     
     .store-image {
         height: 200px;
+    }
+    .blog-image.gray-rectangle {
+        height: 150px;
+    }
+    
+    .blog-content {
+        padding: 15px;
     }
 }
 

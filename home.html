@@ -7,49 +7,57 @@
     <link rel="stylesheet" href="home.css" />
   </head>
   <body>
-<header class="main-header">
-  <div class="top-bar">
-    <div class="container">
-      <div class="left-section">
-        <span class="phone">8-800 301-1464</span>
-        <a href="#" class="order-call">Заказать звонок</a>
-      </div>
-      <div class="right-section">
-        <span class="location">Москва, Красная площадь, 3. ГУМ</span>
-        <div class="icons">
-          <a href="#" class="icon">👤</a>
-          <a href="panier.html" class="icon">🛒</a>
-          <a href="#" class="icon">🔍</a>
+    <header class="main-header">
+      <div class="top-bar">
+        <div class="container">
+          <div class="left-section">
+            <span class="phone">8-800 301-1464</span>
+            <a href="#" class="order-call">Заказать звонок</a>
+          </div>
+          <div class="right-section">
+            <span class="location">Москва, Красная площадь, 3. ГУМ</span>
+            <div class="icons">
+              <a href="#" class="icon">👤</a>
+              <a href="panier.html" class="icon">🛒</a>
+              <a href="#" class="icon">🔍</a>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
 
-  <div class="main-nav">
-    <div class="container">
-      <div class="logo">BOSE</div>
-      
-      <!-- Menu mobile sans JS -->
-      <input type="checkbox" id="mobile-menu-toggle" class="mobile-menu-checkbox">
-      <label for="mobile-menu-toggle" class="mobile-menu-button">
-        <span></span>
-        <span></span>
-        <span></span>
-      </label>
-      
-      <nav class="nav-container">
-        <ul class="nav-links">
-          <li><a href="#">Каталог</a></li>
-          <li><a href="#">Акции</a></li>
-          <li><a href="#">Блог</a></li>
-          <li><a href="#">Как купить?</a></li>
-          <li><a href="#">О Компании</a></li>
-          <li><a href="#">Контакты</a></li>
-        </ul>
-      </nav>
-    </div>
-  </div>
-</header>
+      <div class="main-nav">
+        <div class="container">
+          <div class="logo">
+            <a href="home.html">
+              <img src="/assets/logo_bose.png" alt="logo" />
+            </a>
+          </div>
+
+          <!-- Menu mobile sans JS -->
+          <input
+            type="checkbox"
+            id="mobile-menu-toggle"
+            class="mobile-menu-checkbox"
+          />
+          <label for="mobile-menu-toggle" class="mobile-menu-button">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+
+          <nav class="nav-container">
+            <ul class="nav-links">
+              <li><a href="#catalog">Каталог</a></li>
+              <li><a href="#promotion">Акции</a></li>
+              <li><a href="#blog">Блог</a></li>
+              <li><a href="#footer">Как купить?</a></li>
+              <li><a href="#footer">О Компании</a></li>
+              <li><a href="#footer">Контакты</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
     <main>
       <!-- hero section  -->
       <section class="hero-section">
@@ -95,11 +103,11 @@
             </div>
           </div>
 
-          
-          <div class="products-grid">
-
+          <div id="catalog" class="products-grid">
             <div class="product-card">
-              <div class="product-image"></div>
+              <div class="product-image">
+                <img src="/assets/product1.jpg" alt="product bose">
+              </div>
               <div class="product-info">
                 <h3>Bose S1 Pro+</h3>
                 <p class="product-color">PA System</p>
@@ -117,7 +125,9 @@
             </div>
 
             <div class="product-card">
-              <div class="product-image"></div>
+              <div class="product-image">
+                <img src="/assets/product2.jpg" alt="product bose">
+              </div>
               <div class="product-info">
                 <h3>Bose S1 Pro+</h3>
                 <p class="product-color">PA System</p>
@@ -134,7 +144,9 @@
             </div>
 
             <div class="product-card">
-              <div class="product-image"></div>
+              <div class="product-image">
+                <img src="/assets/product3.jpg" alt="product bose">
+              </div>
               <div class="product-info">
                 <h3>Bose S1 Pro+</h3>
                 <p class="product-color">PA System</p>
@@ -151,41 +163,9 @@
             </div>
 
             <div class="product-card">
-              <div class="product-image"></div>
-              <div class="product-info">
-                <h3>Bose S1 Pro+</h3>
-                <p class="product-color">PA System</p>
-                <p class="price">120 990 p.</p>
+              <div class="product-image">
+                <img src="/assets/product4.jpg" alt="product bose">
               </div>
-              <div class="quick-view">
-                <h4>Быстрый просмотр</h4>
-                <div class="variants">
-                  <div class="variant active"></div>
-                  <div class="variant"></div>
-                  <div class="variant"></div>
-                </div>
-                <button class="buy-btn">Купить</button>
-              </div>
-            </div>
-
-            <div class="product-card">
-              <div class="product-image"></div>
-              <div class="product-info">
-                <h3>Bose S1 Pro+</h3>
-                <p class="product-color">PA System</p>
-                <p class="price">120 990 p.</p>
-              </div>
-              <div class="quick-view">
-                <h4>Быстрый просмотр</h4>
-                <div class="variants">
-                  <div class="variant active"></div>
-                </div>
-                <button class="buy-btn">Купить</button>
-              </div>
-            </div>
-
-            <div class="product-card">
-              <div class="product-image"></div>
               <div class="product-info">
                 <h3>Bose S1 Pro+</h3>
                 <p class="product-color">PA System</p>
@@ -203,7 +183,9 @@
             </div>
 
             <div class="product-card">
-              <div class="product-image"></div>
+              <div class="product-image">
+                <img src="/assets/product5.jpg" alt="product bose">
+              </div>
               <div class="product-info">
                 <h3>Bose S1 Pro+</h3>
                 <p class="product-color">PA System</p>
@@ -213,49 +195,15 @@
                 <h4>Быстрый просмотр</h4>
                 <div class="variants">
                   <div class="variant active"></div>
-                  <div class="variant"></div>
                 </div>
                 <button class="buy-btn">Купить</button>
               </div>
             </div>
 
             <div class="product-card">
-              <div class="product-image"></div>
-              <div class="product-info">
-                <h3>Bose S1 Pro+</h3>
-                <p class="product-color">PA System</p>
-                <p class="price">120 990 p.</p>
+              <div class="product-image">
+                <img src="/assets/product6.jpg" alt="product bose">
               </div>
-              <div class="quick-view">
-                <h4>Быстрый просмотр</h4>
-                <div class="variants">
-                  <div class="variant active"></div>
-                  <div class="variant"></div>
-                  <div class="variant"></div>
-                </div>
-                <button class="buy-btn">Купить</button>
-              </div>
-            </div>
-
-            <div class="product-card">
-              <div class="product-image"></div>
-              <div class="product-info">
-                <h3>Bose S1 Pro+</h3>
-                <p class="product-color">PA System</p>
-                <p class="price">120 990 p.</p>
-              </div>
-              <div class="quick-view">
-                <h4>Быстрый просмотр</h4>
-                <div class="variants">
-                  <div class="variant active"></div>
-                  <div class="variant"></div>
-                </div>
-                <button class="buy-btn">Купить</button>
-              </div>
-            </div>
-
-            <div class="product-card">
-              <div class="product-image"></div>
               <div class="product-info">
                 <h3>Bose S1 Pro+</h3>
                 <p class="product-color">PA System</p>
@@ -273,7 +221,9 @@
             </div>
 
             <div class="product-card">
-              <div class="product-image"></div>
+              <div class="product-image">
+                <img src="/assets/product7.jpg" alt="product bose">
+              </div>
               <div class="product-info">
                 <h3>Bose S1 Pro+</h3>
                 <p class="product-color">PA System</p>
@@ -290,7 +240,87 @@
             </div>
 
             <div class="product-card">
-              <div class="product-image"></div>
+              <div class="product-image">
+                <img src="/assets/product8.png" alt="product bose">
+              </div>
+              <div class="product-info">
+                <h3>Bose S1 Pro+</h3>
+                <p class="product-color">PA System</p>
+                <p class="price">120 990 p.</p>
+              </div>
+              <div class="quick-view">
+                <h4>Быстрый просмотр</h4>
+                <div class="variants">
+                  <div class="variant active"></div>
+                  <div class="variant"></div>
+                  <div class="variant"></div>
+                </div>
+                <button class="buy-btn">Купить</button>
+              </div>
+            </div>
+
+            <div class="product-card">
+              <div class="product-image">
+                <img src="/assets/product9.png" alt="product bose">
+              </div>
+              <div class="product-info">
+                <h3>Bose S1 Pro+</h3>
+                <p class="product-color">PA System</p>
+                <p class="price">120 990 p.</p>
+              </div>
+              <div class="quick-view">
+                <h4>Быстрый просмотр</h4>
+                <div class="variants">
+                  <div class="variant active"></div>
+                  <div class="variant"></div>
+                </div>
+                <button class="buy-btn">Купить</button>
+              </div>
+            </div>
+
+            <div class="product-card">
+              <div class="product-image">
+                <img src="/assets/product10.jpg" alt="product bose">
+              </div>
+              <div class="product-info">
+                <h3>Bose S1 Pro+</h3>
+                <p class="product-color">PA System</p>
+                <p class="price">120 990 p.</p>
+              </div>
+              <div class="quick-view">
+                <h4>Быстрый просмотр</h4>
+                <div class="variants">
+                  <div class="variant active"></div>
+                  <div class="variant"></div>
+                  <div class="variant"></div>
+                </div>
+                <button class="buy-btn">Купить</button>
+              </div>
+            </div>
+
+            <div class="product-card">
+              <div class="product-image">
+                <img src="/assets/product11.jpg" alt="product bose">
+              </div>
+              <div class="product-info">
+                <h3>Bose S1 Pro+</h3>
+                <p class="product-color">PA System</p>
+                <p class="price">120 990 p.</p>
+              </div>
+              <div class="quick-view">
+                <h4>Быстрый просмотр</h4>
+                <div class="variants">
+                  <div class="variant active"></div>
+                  <div class="variant"></div>
+                </div>
+                <button class="buy-btn">Купить</button>
+              </div>
+            </div>
+
+            <div class="product-card">
+              <div class="product-image">
+                <img src="/assets/product12.jpg" alt="product bose">
+              </div>
               <div class="product-info">
                 <h3>Bose S1 Pro+</h3>
                 <p class="product-color">PA System</p>
@@ -311,7 +341,7 @@
           <div class="featured-products">
             <!-- Produit 1 -->
             <div class="featured-product">
-              <div class="product-image gray-rectangle">
+              <div class="product-image gray-rectangle" style="background-image: url('/assets/image-promo1.jpg');">
                 <div class="image-overlay">
                   <h3>Топовый саундбар</h3>
                   <p>с Dolby Atmos</p>
@@ -322,7 +352,7 @@
 
             <!-- Produit 2 -->
             <div class="featured-product">
-              <div class="product-image gray-rectangle">
+              <div class="product-image gray-rectangle" style="background-image: url('/assets/image-promo1.jpg');">
                 <div class="image-overlay">
                   <h3>Шумоподавление,</h3>
                   <p>иммерсивный звук</p>
@@ -333,7 +363,7 @@
 
             <!-- Produit 3 -->
             <div class="featured-product">
-              <div class="product-image gray-rectangle">
+              <div class="product-image gray-rectangle" style="background-image: url('/assets/image-promo1.jpg');">
                 <div class="image-overlay">
                   <h3>Интегральный усилитель</h3>
                   <p>с Bluetooth, Wi-Fi, AirPlay 2</p>
@@ -346,7 +376,7 @@
       </section>
 
       <!-- promotions -->
-      <section class="promotions-section">
+      <section id="promotion" class="promotions-section">
         <div class="container">
           <!-- En-tête identique à la section produits -->
           <div class="section-header">
@@ -359,7 +389,9 @@
           <div class="promotions-grid">
             <!-- Promotion 1 -->
             <div class="promotion-card">
-              <div class="promo-image gray-square"></div>
+              <div class="promo-image gray-square">
+                <img src="/assets/promo1.jpg" alt="">
+              </div>
               <div class="promo-info">
                 <span class="promo-date">10 января 2025</span>
                 <h3 class="promo-text">Срочная доставка за 2 часа</h3>
@@ -368,7 +400,9 @@
 
             <!-- Promotion 2 -->
             <div class="promotion-card">
-              <div class="promo-image gray-square"></div>
+              <div class="promo-image gray-square">
+                <img src="/assets/promo2.jpg" alt="">
+              </div>
               <div class="promo-info">
                 <span class="promo-date">31 июля 2024</span>
                 <h3 class="promo-text">Рассрочка до 6 месяцев</h3>
@@ -377,7 +411,9 @@
 
             <!-- Promotion 3 -->
             <div class="promotion-card">
-              <div class="promo-image gray-square"></div>
+              <div class="promo-image gray-square">
+                <img src="/assets/promo3.jpg" alt="">
+              </div>
               <div class="promo-info">
                 <span class="promo-date">12 июля 2024</span>
                 <h3 class="promo-text">Вместе выгоднее – скидка на комплект</h3>
@@ -386,7 +422,9 @@
 
             <!-- Promotion 4 -->
             <div class="promotion-card">
-              <div class="promo-image gray-square"></div>
+              <div class="promo-image gray-square">
+                <img src="/assets/promo4.jpg" alt="">
+              </div>
               <div class="promo-info">
                 <span class="promo-date">14 марта 2022</span>
                 <h3 class="promo-text">Скидка при оплате онлайн</h3>
@@ -395,7 +433,9 @@
 
             <!-- Promotion 5 -->
             <div class="promotion-card">
-              <div class="promo-image gray-square"></div>
+              <div class="promo-image gray-square">
+                <img src="/assets/promo5.jpg" alt="">
+              </div>
               <div class="promo-info">
                 <span class="promo-date">20 июля 2021</span>
                 <h3 class="promo-text">Гарантия лучшей цены</h3>
@@ -406,9 +446,9 @@
       </section>
 
       <!-- blog -->
-      <section class="blog-section">
+      <section id="blog" class="blog-section">
         <div class="container">
-          <!-- En-tête identique à la section produits -->
+          
           <div class="section-header">
             <div class="category-links">
               <a href="#" class="category-link active">Блог</a>
@@ -417,9 +457,11 @@
           </div>
 
           <div class="blog-grid">
-            <!-- Article 1 (2x plus large) -->
+            
             <div class="blog-card wide-card">
-              <div class="blog-image gray-rectangle"></div>
+              <div class="blog-image gray-rectangle">
+                <img src="/assets/blog-image1.jpg" alt="">
+              </div>
               <div class="blog-content">
                 <h3>
                   Bluetooth-колонка Bose SoundLink Plus - золотая середина
@@ -430,7 +472,9 @@
 
             <!-- Article 2 -->
             <div class="blog-card">
-              <div class="blog-image gray-rectangle"></div>
+              <div class="blog-image gray-rectangle">
+                <img src="/assets/blog-image2.jpg" alt="">
+              </div>
               <div class="blog-content">
                 <h3>Bose QuietComfort Ultra Earbuds 2nd Gen</h3>
                 <p class="blog-date">15 июня 2025</p>
@@ -439,7 +483,9 @@
 
             <!-- Article 3 -->
             <div class="blog-card">
-              <div class="blog-image gray-rectangle"></div>
+              <div class="blog-image gray-rectangle">
+                <img src="/assets/blog-image3.jpg" alt="">
+              </div>
               <div class="blog-content">
                 <h3>Обзор новых наушников</h3>
                 <p class="blog-date">30 апреля 2025</p>
@@ -448,7 +494,9 @@
 
             <!-- Article 4 -->
             <div class="blog-card">
-              <div class="blog-image gray-rectangle"></div>
+              <div class="blog-image gray-rectangle">
+                <img src="/assets/blog-image4.jpg" alt="">
+              </div>
               <div class="blog-content">
                 <h3>Парковка для клиентов</h3>
                 <p class="blog-date">14 марта 2025</p>
@@ -457,7 +505,9 @@
 
             <!-- Article 5 (pleine largeur) -->
             <div class="blog-card full-width-card">
-              <div class="store-image gray-rectangle"></div>
+              <div class="store-image gray-rectangle">
+                <img src="/assets/blog-image5.jpg" alt="">
+              </div>
               <div class="store-content">
                 <h3>Флагманский магазин Bose в ГУМе</h3>
                 <p>
@@ -477,7 +527,7 @@
         </div>
       </section>
     </main>
-    <footer class="main-footer">
+    <footer id="footer" class="main-footer">
       <div class="container">
         <div class="footer-grid">
           <!-- Colonne 1 -->
